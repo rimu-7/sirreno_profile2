@@ -1,15 +1,14 @@
 import React from "react";
 import Navbar from "../Shared/Navbar/Navbar";
-import Footer from "../Shared/Footer/Footer";
 import { Link } from "react-router-dom";
 
 function ErrorPage() {
   return (
-    <div>
+    <div className="bg-[#212121] text-white">
       <Navbar />
-      <div className="flex flex-col items-center justify-center min-h-screen py-20 bg-white">
-        <div className="text-9xl font-bold text-center text-gray-900">404</div>
-        <h1 className="text-center font-extrabold text-4xl sm:text-5xl mt-6 text-gray-900">
+      <div className="flex flex-col items-center justify-center min-h-screen py-20 ">
+        <div className="text-9xl font-bold text-center text-red-500 ">404</div>
+        <h1 className="text-center font-extrabold text-4xl sm:text-5xl mt-6 ">
           You have found a secret place.
         </h1>
         <p className="text-gray-500 text-lg text-center max-w-2xl mx-auto mt-6 mb-12">
@@ -27,7 +26,6 @@ function ErrorPage() {
           </Link>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Music from "../Pages/Components/Music";
+import Portfolio from "../Pages/Components/Portfolio";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
       {
         path: "/music",
         element: <Music />, // Music
+      },
+      {
+        path: "/portfolio",
+        element: <Portfolio />, // Music
       },
     ],
   },
