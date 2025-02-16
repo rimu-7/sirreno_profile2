@@ -56,7 +56,7 @@ const Music = () => {
   return (
     <div className="p-5">
       <h2 className="text-2xl font-bold text-center mb-6">Music</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-2">
         {musicCards.map((card) => (
           <div
             key={card.id}
@@ -74,7 +74,7 @@ const Music = () => {
                 href={card.purchaseLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+                className="block bg-blue-600  py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
               >
                 Purchase on Apple Music
               </a>
