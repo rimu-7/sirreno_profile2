@@ -55,7 +55,7 @@ const Music = () => {
 
   return (
     <div className="p-5">
-      <h2 className="text-2xl font-bold text-center mb-6">Music</h2>
+      {/* <h2 className="text-2xl font-bold text-center mb-6">Music</h2> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-5 gap-2">
         {musicCards.map((card) => (
           <div
