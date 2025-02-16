@@ -67,7 +67,7 @@ const DropdownMenu = () => {
                 layoutId="underline"
                 className="absolute left-0 right-0 h-[3px]  bottom-[-4px] "
                 initial={false}
-                animate={{ backgroundColor: "" }}
+                animate={{ backgroundColor: "#fff" }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
               />
             )}
