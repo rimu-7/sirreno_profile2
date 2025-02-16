@@ -5,12 +5,15 @@ import Footer from "../Pages/Shared/Footer/Footer";
 
 const Main = () => {
   return (
-    <div className="bg-[#212121] min-h-screen  text-white">
+    <div className="bg-[#212121] text-white min-h-screen flex flex-col">
       <Navbar />
 
-      <div className="">
+      {/* Content area that grows to fill remaining space */}
+      <div className="flex-grow">
         <Outlet />
       </div>
+
+      {/* Footer stays at the bottom */}
       <Footer />
     </div>
   );
