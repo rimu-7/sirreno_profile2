@@ -56,11 +56,11 @@ const Music = () => {
   return (
     <div className="p-5">
       {/* <h2 className="text-2xl font-bold text-center mb-6">Music</h2> */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+      <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {musicCards.map((card) => (
           <div
             key={card.id}
-            className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+            className=" bg-black border border-neutral-600 p-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
           >
             <img
               src={card.image}
