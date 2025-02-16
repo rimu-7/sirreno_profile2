@@ -52,13 +52,13 @@ const Portfolio = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {artworkData.map((artwork) => (
             <div
-              className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="border-2 border-neutral-600 p-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
               key={artwork.id}
             >
               <img
                 src={artwork.url}
                 alt={artwork.id}
-                className="w-full h-48 sm:h-64 object-cover"
+                className="w-full h-48 sm:h-64 rounded-md object-cover"
               />
             </div>
           ))}
