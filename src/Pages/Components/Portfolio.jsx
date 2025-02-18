@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../Shared/Nav/Navbar";
 
 const Portfolio = () => {
   // Dummy data structured like an API response
@@ -38,32 +39,35 @@ const Portfolio = () => {
   `;
 
   return (
-    <div className="p-4 sm:p-8">
-      {/* Artist Bio and Statement */}
-      <section className="mb-8 sm:mb-12">
-        <div className="max-w-2xl mx-auto text-sm sm:text-md text-center">
-          <p className="text-gray-300 mb-4">{artistBio}</p>
-          <p className="text-gray-400 italic">{artistStatement}</p>
-        </div>
-      </section>
+    <div className="">
 
-      {/* Best Artwork Showcase */}
-      <section className="mb-8 sm:mb-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {artworkData.map((artwork) => (
-            <div
-              className="border-2 border-neutral-600 p-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-              key={artwork.id}
-            >
-              <img
-                src={artwork.url}
-                alt={artwork.id}
-                className="w-full h-48 sm:h-64 rounded-md object-cover"
-              />
-            </div>
-          ))}
-        </div>
-      </section>
+      <div className="p-4 sm:p-8">
+        {/* Artist Bio and Statement */}
+        <section className="mb-8 sm:mb-12">
+          <div className="max-w-2xl mx-auto text-sm sm:text-md text-center">
+            <p className="text-gray-300 mb-4">{artistBio}</p>
+            <p className="text-gray-400 italic">{artistStatement}</p>
+          </div>
+        </section>
+
+        {/* Best Artwork Showcase */}
+        <section className="mb-8 sm:mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {artworkData.map((artwork) => (
+              <div
+                className="border-2 border-neutral-600 p-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                key={artwork.id}
+              >
+                <img
+                  src={artwork.url}
+                  alt={artwork.id}
+                  className="w-full h-48 sm:h-64 rounded-md object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
