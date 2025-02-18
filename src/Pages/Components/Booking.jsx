@@ -77,7 +77,7 @@ function Contact() {
                 initial="initial"
                 animate="animate"
               >
-                <Link to="">
+                <Link to="https://www.facebook.com/share/18BcsFpsc1/?mibextid=wwXIfr">
                   <FaFacebook className="text-4xl sm:text-5xl p-3 rounded-full bg-blue-600 hover:bg-blue-700 hover:scale-110" />
                 </Link>
               </motion.div>
@@ -87,7 +87,7 @@ function Contact() {
                 initial="initial"
                 animate="animate"
               >
-                <Link to="">
+                <Link to="https://www.instagram.com/jslughtofficial?igsh=dWo5MzFsMjBkbHJn">
                   <FaInstagram className="text-4xl sm:text-5xl p-3 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:scale-110" />
                 </Link>
               </motion.div>
@@ -97,7 +97,7 @@ function Contact() {
                 initial="initial"
                 animate="animate"
               >
-                <Link to="">
+                <Link to="https://www.tiktok.com/@jslught_official?_t=ZM-8u0og9sidnh&_r=1">
                   <FaTiktok className="text-4xl sm:text-5xl p-3 rounded-full bg-black hover:text-gray-400 hover:scale-110" />
                 </Link>
               </motion.div>
@@ -107,7 +107,7 @@ function Contact() {
                 initial="initial"
                 animate="animate"
               >
-                <Link to="">
+                <Link to="https://x.com/jslught?s=21">
                   <FaTwitter className="text-4xl sm:text-5xl p-3 rounded-full bg-blue-500 hover:bg-blue-600 hover:scale-110" />
                 </Link>
               </motion.div>
@@ -117,7 +117,7 @@ function Contact() {
                 initial="initial"
                 animate="animate"
               >
-                <Link to="">
+                <Link to="https://youtube.com/@jslught8561?si=AvhVpbN1AXnssGR_">
                   <FaYoutube className="text-4xl sm:text-5xl p-3 rounded-full bg-red-600 hover:bg-red-700 hover:scale-110" />
                 </Link>
               </motion.div>

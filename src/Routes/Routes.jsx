@@ -6,7 +6,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Music from "../Pages/Components/Music";
 import Portfolio from "../Pages/Components/Portfolio";
 import About from "../Pages/Components/About";
-import Contact from "../Pages/Components/Contact";
+import Booking from "../Pages/Components/Booking";
 import Events from "../Pages/Components/Events";
 import Blog from "../Pages/Components/Blog";
 
@@ -33,8 +33,8 @@ export const router = createBrowserRouter([
         element: <About />,
       },
       {
-        path: "/contact",
-        element: <Contact />,
+        path: "/booking",
+        element: <Booking />,
       },
       {
         path: "/events",

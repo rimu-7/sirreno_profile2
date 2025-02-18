@@ -26,9 +26,8 @@ const menuItems = [
   { name: "Home", path: "/" },
   { name: "Music", path: "/music" },
   { name: "Portfolio", path: "/portfolio" },
-  { name: "About", path: "/about" },
   { name: "Blog", path: "/blog" },
-  { name: "Contact", path: "/contact" },
+  { name: "Booking", path: "/booking" },
   { name: "Events", path: "/events" },
 ];
 
