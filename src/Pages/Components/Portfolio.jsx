@@ -36,13 +36,13 @@ const Portfolio = () => {
     {
       id: 1,
       heading: "Introduction",
-      description:
-        "J Slught is a multi-talented Liberian singer, songwriter, record producer, and actor who is making a name for himself in the music industry. With his unique blend of Afropop and traditional Liberian sounds, he is helping to promote the cultural heritage of Liberia through his music.",
+      description: `J Slught is a versatile Liberian artist known for his unique fusion of Afropop, R&B, and traditional Liberian sounds. As a singer, songwriter, record producer, and actor, he uses his soulful voice and dynamic production to celebrate Liberia’s rich cultural heritage. Through chart-topping hits, electrifying performances, and global collaborations, he continues to push boundaries and elevate Liberian music on the world stage.`,
     },
     {
       id: 2,
       heading: "Biography",
-      description: `Born on November 21, 1995, Joseph Wesseh Tah III, J Slught started Singing dancing and performing in cultural events in his high school RICKS INSTITUTE. He discovered his passion for music at a young age and began his solo career with the release of his hit single "Can't Believe". Since then, he has released several successful singles including, “Celebrate” “Oh my love” “Kill Me” “Sweet Love” “No money”, which have gained massive airplay on radio and on the streets of Monrovia.`,
+      description: `
+Joseph Wesseh Tah III, professionally known as J Slught, is a Liberian singer, songwriter, and performer whose soulful sound and infectious melodies have made him one of the most celebrated artists in his country’s music scene. Born on November 25, 1995, J Slught discovered his passion for music at an early age, honing his craft through singing, dancing, and performing in cultural events at Ricks Institute, where he attended high school. His breakthrough came with the release of his hit single “Can’t Believe,” which quickly garnered widespread attention and cemented his status as a rising star. Building on this success, J Slught continued to captivate audiences with a string of chart-topping singles, including “Celebrate,” “Oh My Love,” “Kill Me,” “Sweet Love,” and “No Money.” His music, characterized by heartfelt lyrics and dynamic production, has earned massive airplay on radio stations and in the streets of Monrovia, solidifying his place in the Liberian music industry. J Slught’s artistry extends beyond singles, as showcased in his highly acclaimed album, “Home & Beyond.” With a sound that blends Afropop, R&B, and traditional influences, he continues to push creative boundaries while staying true to his Liberian roots.      `,
     },
     {
       id: 3,
