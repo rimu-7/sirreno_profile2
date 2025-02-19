@@ -25,7 +25,7 @@ function Home() {
       {/* Carousel */}
       <div className="hidden sm:flex px-24 w-full h-48 justify-between">
         <Carousel />
-        <Carousel2 />
+        {/* <Carousel2 /> */}
       </div>
 
       {/* Quote in Bottom Right Corner */}
