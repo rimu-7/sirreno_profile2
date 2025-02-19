@@ -14,7 +14,7 @@ const Carousel = () => {
   // Fetch images from backend
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/carousel") // Adjust API URL if needed
+      .get("https://profile-2-backend-server.vercel.app/api/carousel") // Adjust API URL if needed
       .then((response) => {
         setImages(response.data);
         setLoading(false);

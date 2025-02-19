@@ -8,7 +8,7 @@ const Events = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/events");
+        const response = await axios.get("https://profile-2-backend-server.vercel.app/api/events");
         // Map API response to extract year from the date
         const eventsData = response.data.map((event) => ({
           id: event._id,

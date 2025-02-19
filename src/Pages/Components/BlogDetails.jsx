@@ -11,7 +11,7 @@ const BlogDetail = () => {
     const fetchBlogDetail = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/blogs/${id}`
+          `https://profile-2-backend-server.vercel.app/api/blogs/${id}`
         );
         setBlog(response.data);
       } catch (error) {

@@ -10,7 +10,7 @@ const Blog = () => {
     const fetchBlogs = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/blogs"
+          "https://profile-2-backend-server.vercel.app/api/blogs"
         );
         console.log("Fetched blogs:", response.data);
 
