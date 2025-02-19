@@ -6,27 +6,27 @@ const Portfolio = () => {
   const artworkData = [
     {
       id: 1,
-      url: "https://picsum.photos/200/300",
+      url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/7_rvz2wl.jpg",
     },
     {
       id: 2,
-      url: "https://picsum.photos/200/300",
+      url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/5_pfaxh5.jpg",
     },
     {
       id: 3,
-      url: "https://picsum.photos/200/300",
+      url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/2_vrmr9p.jpg",
     },
     {
       id: 4,
-      url: "https://picsum.photos/200/300",
+      url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/4_kdja7h.jpg",
     },
     {
       id: 5,
-      url: "https://picsum.photos/200/300",
+      url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/6_p9mwnr.jpg",
     },
     {
       id: 6,
-      url: "https://picsum.photos/200/300",
+      url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/3_abl5nw.jpg",
     },
   ];
 
