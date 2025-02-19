@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Songs = () => {
   // Dummy data for the music cards
+  const [showAll, setShowAll] = useState(false);
+
+  const handleSeeMore = () => {
+    setShowAll(true);
+  };
   const musicCards = [
     {
       id: 1,
@@ -54,20 +59,19 @@ const Songs = () => {
   ];
 
   return (
-    <div className="bg-red-300">
-
+    <div className="">
       <div className="p-5">
-        <h2 className="text-6xl font-bold text-center mb-6">Songs</h2>
-        <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {musicCards.map((card) => (
+        <h2 className="text-6xl font-bold text-center mb-6">Singles</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-5 gap-4 sm:gap-6">
+          {musicCards.slice(0, showAll ? musicCards.length : 3).map((card) => (
             <div
               key={card.id}
-              className=" bg-black border border-neutral-600 p-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
+              className="bg-black rounded-lg p-4 flex flex-col w-96  gap-4 mx-auto"
             >
               <img
                 src={card.image}
                 alt={card.title}
-                className="w-full h-64 object-cover rounded-lg"
+                className=" w-full h-48 object-cover rounded-lg"
               />
               <h3 className="text-lg font-semibold mt-3">{card.title}</h3>
               <p className="text-sm text-gray-400">{card.artist}</p>
@@ -76,7 +80,7 @@ const Songs = () => {
                   href={card.purchaseLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block bg-blue-600  py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+                  className="block bg-blue-600 text-center py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
                 >
                   Purchase on Apple Music
                 </a>
@@ -84,14 +88,24 @@ const Songs = () => {
                   href={card.streamLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors"
+                  className="block bg-green-600 text-center text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors"
                 >
-                  Stream Now
+                  Stream On Spotify
                 </a>
               </div>
             </div>
           ))}
         </div>
+        {!showAll && (
+          <div className="mt-4 text-center">
+            <button
+              onClick={handleSeeMore}
+              className="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition-colors"
+            >
+              See More
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
