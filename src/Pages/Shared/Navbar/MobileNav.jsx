@@ -47,7 +47,7 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
           key={item.path}
           className="relative cursor-pointer hover:scale-105 hover:duration-500"
           variants={itemVariants}
-          whileHover={{ scale: 1.1, color: "" }}
+          whileHover={{ scale: 1.1, color: "#ff7f50" }}
           whileTap={{ scale: 0.95 }}
           onClick={() => {
             setSelectedTab(item.path);
@@ -63,9 +63,9 @@ const MobileNav = ({ isOpen, toggleMenu }) => {
           {selectedTab === item.path && (
             <motion.div
               layoutId="underline"
-              className="absolute left-0 right h-[3px]  bottom-[-4px]"
+              className="absolute left-0 right h-[3px] text-amber-400 bottom-[-4px]"
               initial={false}
-              animate={{ backgroundColor: "#fff" }}
+              animate={{ backgroundColor: "#ff7f50" }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
             />
           )}

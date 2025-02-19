@@ -24,8 +24,8 @@ const transition = {
 
 const menuItems = [
   { name: "Home", path: "/" },
-  { name: "Artist", path: "/artist" },
-  { name: "Services", path: "/services" },
+  { name: "Music", path: "/music" },
+  { name: "Portfolio", path: "/portfolio" },
   { name: "Blog", path: "/blog" },
   { name: "Booking", path: "/booking" },
   { name: "Events", path: "/events" },

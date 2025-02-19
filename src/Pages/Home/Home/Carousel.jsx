@@ -76,7 +76,7 @@ const Carousel = () => {
   return (
     <div {...handlers} className="relative  overflow-hidden">
       <div
-        className="flex  items-start justify-center h-48 w-48  relative"
+        className="flex  items-start justify-center h-36 w-36  relative"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
@@ -91,7 +91,7 @@ const Carousel = () => {
               initial={{ opacity: 0, scale: 1.1, x: 100, filter: "blur(10px)" }}
               animate={{ opacity: 1, scale: 1, x: 0, filter: "blur(0px)" }}
               exit={{ opacity: 0, scale: 1.1, x: -100, filter: "blur(10px)" }}
-              transition={{ duration: 1.2, ease: "easeInOut" }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
             />
           </AnimatePresence>
         </div>
