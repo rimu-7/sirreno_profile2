@@ -42,7 +42,7 @@ const Portfolio = () => {
     {
       id: 2,
       heading: "Biography",
-      description: `Born Joseph Wesseh Tah III, J Slught started Singing dancing and performing in cultural events in his high school RICKS INSTITUTE. He discovered his passion for music at a young age and began his solo career with the release of his hit single "Can't Believe". Since then, he has released several successful singles including, “Celebrate” “Oh my love” “Kill Me” “Sweet Love” “No money”, which have gained massive airplay on radio and on the streets of Monrovia.`,
+      description: `Born on November 21, 1995, Joseph Wesseh Tah III, J Slught started Singing dancing and performing in cultural events in his high school RICKS INSTITUTE. He discovered his passion for music at a young age and began his solo career with the release of his hit single "Can't Believe". Since then, he has released several successful singles including, “Celebrate” “Oh my love” “Kill Me” “Sweet Love” “No money”, which have gained massive airplay on radio and on the streets of Monrovia.`,
     },
     {
       id: 3,
