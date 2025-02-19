@@ -87,14 +87,18 @@ const Portfolio = () => {
               </div>;
             })} */}
             {artistText.map((item) => (
-  <div key={item.id} className="artist-item p-6 m-2  rounded-lg  ">
-    <h2 className="text-4xl font-semibold ">{item.heading}</h2>
-    <p className="text-base text-justify  mt-2" style={{ whiteSpace: "pre-line" }}>
-      {item.description}
-    </p>
-  </div>
-))}
-
+              <div key={item.id} className="artist-item p-6 m-2  rounded-lg  ">
+                <h2 className="text-4xl font-semibold ">{item.heading}</h2>
+                <p
+                  className={`text-base mt-2 ${
+                    item.id === 3 ? "text-center" : "text-justify"
+                  }`}
+                  style={{ whiteSpace: "pre-line" }}
+                >
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
