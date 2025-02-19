@@ -46,26 +46,15 @@ function Contact() {
                 href="tel:+231886120438"
                 className="text-lg hover:text-blue-600"
               >
-                +23-------------
+                +231880372858
               </a>
-              <a
-                href="tel:+231770277646"
-                className="text-lg hover:text-blue-600"
-              >
-                +23-------------
-              </a>
-              <a
-                href="tel:+231555267036"
-                className="text-lg hover:text-blue-600"
-              >
-                +23-------------
-              </a>
+              
             </div>
 
             {/* Email */}
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <MdOutlineEmail className="text-xl sm:text-2xl text-blue-600" />
-              <p className="text-lg">abc@gmail.com</p>
+              <a href="mail:jslughtmusic@gmail.com" className="text-lg">jslughtmusic@gmail.com</a>
             </div>
 
             {/* Social Media Icons */}
