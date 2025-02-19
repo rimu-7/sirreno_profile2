@@ -16,18 +16,18 @@ function Home() {
         bg-[url(https://res.cloudinary.com/ddssf6cm6/image/upload/v1739851698/artist_website_1_fe02ec.jpg)]"
       ></div>
       <Navbar />
-      
+
       {/* Artist Name in Top Right Corner */}
       <div className="absolute top-20 sm:top-16 lg:top-30 right-auto sm:right-20 text-5xl">
         artist name
       </div>
-      
+
       {/* Carousel */}
       <div className="hidden sm:flex px-24 w-full h-48 justify-between">
-        <Carousel />
         <Carousel2 />
+        <Carousel />
       </div>
-      
+
       {/* Quote in Bottom Right Corner */}
       <div className="absolute bottom-10 px-16 italic right-4 text-lg">
         <p>artist quote</p>
