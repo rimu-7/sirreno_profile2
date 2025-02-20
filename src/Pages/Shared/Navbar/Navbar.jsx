@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={` sticky bg-opacity-90 backdrop-blur-lg border-b-2 border-neutral-600 top-0 p-5 mb-2 w-full transition-transform duration-300 ${
+      className={` sticky bg-opacity-90 backdrop-blur-lg top-0 p-5 mb-2 w-full transition-transform duration-300 ${
         isHidden ? "-translate-y-full" : "translate-y-0"
       }`}
     >
