@@ -67,7 +67,7 @@ function Home() {
   }, [quote.length]);
 
   return (
-    <div className=" relative min-h-screen min-w-screen w-full text-center text-2xl text-white">
+    <div className="relative w-full min-h-screen">
       {/* Navbar */}
       <div className="absolute top-0 left-0 w-full z-10">
         {/* Show only on small screens */}
@@ -81,46 +81,45 @@ function Home() {
         </div>
       </div>
 
-
       {/* Background Image */}
       <div
-        className="absolute inset-0 overflow-hidden bg-cover bg-center  mt-[60px] sm:mt-0
-         bg-[url(https://res.cloudinary.com/ddssf6cm6/image/upload/v1739851698/artist_website_1_fe02ec.jpg)]"
+        className="absolute inset-0 overflow-hidden bg-cover bg-center mt-[60px] sm:mt-0"
+        style={{
+          backgroundImage: "url(https://res.cloudinary.com/ddssf6cm6/image/upload/v1739851698/artist_website_1_fe02ec.jpg)",
+        }}
       >
-
         {/* Artist Name */}
         <div
           style={{ fontFamily: "Paytone One, serif" }}
-          className="absolute top-80 sm:top-32 right-32 sm:right-20 text-5xl"
+          className="absolute top-60 sm:top-32 right-10 sm:right-20 text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white"
         >
           JSlught
         </div>
       </div>
 
-      {/* Carousel */}
-      {/* Carousel */}
-      <div className="hidden sm:flex fixed inset-0 items-center justify-between px-24 w-full h-full">
-  <div className="flex-1 flex justify-start">
-    <Carousel />
-  </div>
-  <div className="flex-1 flex justify-end">
-    <Carousel2 />
-  </div>
-</div>
+      {/* Main Content */}
+      <div className="relative flex flex-col justify-between items-center w-full min-h-screen text-center text-white">
 
+        {/* Carousel (Only on larger screens) */}
+        <div className="hidden sm:flex fixed inset-0 items-center justify-between px-8 sm:px-16 lg:px-24 w-full h-full">
+          <div className="flex-1 flex justify-start">
+            <Carousel />
+          </div>
+          <div className="flex-1 flex justify-end">
+            <Carousel2 />
+          </div>
+        </div>
 
-
-
-
-
-      {/* Quote */}
-      <animated.div
-        style={quoteAnimation}
-        className="absolute bottom-20 px-4 sm:px-16 italic right-4 text-lg"
-      >
-        <p>{quote[currentIndex].description}</p>
-      </animated.div>
+        {/* Quote Section */}
+        <animated.div
+          style={quoteAnimation}
+          className="absolute bottom-10 sm:bottom-20 px-4 sm:px-16 italic text-base sm:text-lg md:text-xl"
+        >
+          <p>{quote[currentIndex].description}</p>
+        </animated.div>
+      </div>
     </div>
+
   );
 }
 
