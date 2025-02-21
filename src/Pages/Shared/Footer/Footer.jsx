@@ -8,7 +8,7 @@ function Footer() {
   }, []);
 
   return (
-    <div className="fixed-bottom  flex justify-center p-2  border-t-2 border-neutral-600 text-center">
+    <div className="fixed-bottom bg-neutral-900 flex justify-center p-2 text-white border-t-2 border-neutral-600 text-center">
       <small className="w-full">
         All Rights Reserved &copy; {year} Copyrights{" "}
         <span style={{ fontFamily: "Abril Fatface, serif" }}>CreaqTech</span> .

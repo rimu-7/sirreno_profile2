@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Typing from "react-typing-effect";
 
-
-
 const iconVariants = (duration) => ({
   initial: { y: 0 },
   animate: {
@@ -25,11 +23,7 @@ const letterAnimation = {
 const firstpart = [
   {
     title: "",
-    description: `Native Breed Media was founded In September 2021. Our team has the knowledge, experience,
-          and creativity to make your brand come to life in Liberia and beyond.
-          Native Breed Media is home to few talented young Liberians that are
-          already doing well in and outside Liberia. The likes of J Slught,
-          Malcolm LL Smith, Jake Mille, Kilas and Jasmine. `,
+    description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
   },
 ];
 
@@ -68,9 +62,7 @@ function FirstPart() {
           >
             <img
               className="object-cover object-center min:h-[90%] w-full rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-              src={
-                "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739238599/logo_mojz5x.jpg"
-              }
+              src={"https://picsum.photos/seed/picsum/200/300"}
               alt="image 1"
             />
           </motion.div>
@@ -82,9 +74,7 @@ function FirstPart() {
           >
             <img
               className="object-cover object-center min:h-[90%] w-full rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-              src={
-                "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739238610/IMG_6549_tsahjh.png"
-              }
+              src={"https://picsum.photos/seed/picsum/200/300"}
               alt="image 2"
             />
           </motion.div>
@@ -96,9 +86,7 @@ function FirstPart() {
           >
             <img
               className="object-cover object-center min:h-[90%] w-full rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-              src={
-                "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739238601/rec3_fgjfla.jpg"
-              }
+              src={"https://picsum.photos/seed/picsum/200/300"}
               alt="image 3"
             />
           </motion.div>
@@ -110,9 +98,7 @@ function FirstPart() {
           >
             <img
               className="object-cover object-center min:h-[90%] w-full rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-              src={
-                "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739239684/about_1_k7sf0o.jpg"
-              }
+              src={"https://picsum.photos/seed/picsum/200/300"}
               alt="image 4"
             />
           </motion.div>
@@ -124,9 +110,7 @@ function FirstPart() {
           >
             <img
               className="object-cover object-center min:h-[90%] w-full rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-              src={
-                "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739239684/about_2_r2c4bg.jpg"
-              }
+              src={"https://picsum.photos/seed/picsum/200/300"}
               alt="image 5"
             />
           </motion.div>
@@ -138,9 +122,7 @@ function FirstPart() {
           >
             <img
               className="object-cover object-center min:h-[90%] w-full rounded-lg shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl"
-              src={
-                "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739238601/rec2_bydjqe.jpg"
-              }
+              src={"https://picsum.photos/seed/picsum/200/300"}
               alt="image 6"
             />
           </motion.div>

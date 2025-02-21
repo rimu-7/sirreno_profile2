@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -37,7 +36,6 @@ const Events = () => {
 
   return (
     <div className="">
-     
       <div className="min-h-screen flex flex-col items-center p-6">
         {sortedEvents.length > 0 ? (
           sortedEvents.map((event) => (
@@ -61,7 +59,6 @@ const Events = () => {
           <p className="text-gray-500">No events available</p>
         )}
       </div>
-      
     </div>
   );
 };

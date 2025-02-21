@@ -1,17 +1,35 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import Navbar from "../Shared/Nav/Navbar";
 
 const Portfolio = () => {
+  // Dummy data structured like an API response
   const [selectedImage, setSelectedImage] = useState(null);
 
   const artworkData = [
-    { id: 1, url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/7_rvz2wl.jpg", duration: 2 },
-    { id: 2, url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/5_pfaxh5.jpg", duration: 3 },
-    { id: 3, url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/2_vrmr9p.jpg", duration: 2.5 },
-    { id: 4, url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/4_kdja7h.jpg", duration: 3.2 },
-    { id: 5, url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/6_p9mwnr.jpg", duration: 2.8 },
-    { id: 6, url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/3_abl5nw.jpg", duration: 3.5 },
+    {
+      id: 1,
+      url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/7_rvz2wl.jpg",
+    },
+    {
+      id: 2,
+      url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/5_pfaxh5.jpg",
+    },
+    {
+      id: 3,
+      url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/2_vrmr9p.jpg",
+    },
+    {
+      id: 4,
+      url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/4_kdja7h.jpg",
+    },
+    {
+      id: 5,
+      url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/6_p9mwnr.jpg",
+    },
+    {
+      id: 6,
+      url: "https://res.cloudinary.com/ddssf6cm6/image/upload/v1739955937/3_abl5nw.jpg",
+    },
   ];
 
   const artistText = [
@@ -57,58 +75,65 @@ Joseph Wesseh Tah III, professionally known as J Slught, is a Liberian singer, s
   ];
 
   return (
-    <div className="p-4 sm:p-8">
-
-      {/* Artist Bio and Statement */}
-      <section className="mb-8 sm:mb-12">
-        <div className="max-w-2xl text-white  mx-auto text-sm sm:text-md text-center">
-          {artistText.map((item) => (
-            <div key={item.id} className="artist-item p-6 m-2  rounded-lg  ">
-              <h2 className="text-4xl font-semibold ">{item.heading}</h2>
-              <p
-                className={`text-base mt-2 ${item.id === 3 ? "text-center" : "text-justify"
+    <div className="">
+      <div className="p-4 sm:p-8">
+        {/* Artist Bio and Statement */}
+        <section className="mb-8 sm:mb-12">
+          <div className="max-w-2xl text-white  mx-auto text-sm sm:text-md text-center">
+            {/* {artistText.map((item) => {
+              <div className="" key={item.id}>
+                <h1>{item.heading}</h1>
+                <p>{item.description}</p>
+              </div>;
+            })} */}
+            {artistText.map((item) => (
+              <div key={item.id} className="artist-item p-6 m-2  rounded-lg  ">
+                <h2 className="text-4xl font-semibold ">{item.heading}</h2>
+                <p
+                  className={`text-base mt-2 ${
+                    item.id === 3 ? "text-center" : "text-justify"
                   }`}
-                style={{ whiteSpace: "pre-line" }}
+                  style={{ whiteSpace: "pre-line" }}
+                >
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Best Artwork Showcase */}
+        <section className="mb-8 sm:mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+            {artworkData.map((artwork) => (
+              <div
+                key={artwork.id}
+                className="border-2 border-neutral-600 p-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                onClick={() => setSelectedImage(artwork.url)}
               >
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-      {/* Best Artwork Showcase */}
-      <section className="mb-8 sm:mb-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-          {artworkData.map((artwork) => (
-            <motion.div
-              key={artwork.id}
-              className="border-2 border-neutral-600 p-2 overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-              onClick={() => setSelectedImage(artwork.url)}
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: artwork.duration, repeat: Infinity, repeatType: "reverse" }}
+                <img
+                  src={artwork.url}
+                  alt={artwork.id}
+                  className="w-full h-48 sm:h-64 rounded-md object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          {selectedImage && (
+            <div
+              className="p-1 fixed inset-0 bg-black bg-opacity-80 duration-500 flex items-center justify-center z-50"
+              onClick={() => setSelectedImage(null)}
             >
               <img
-                src={artwork.url}
-                alt={`Artwork ${artwork.id}`}
-                className="w-full h-48 sm:h-64 rounded-md object-cover"
+                src={selectedImage}
+                alt="Selected Artwork"
+                className="border-2 border-neutral-600  max-w-full max-h-full rounded-lg"
               />
-            </motion.div>
-          ))}
-        </div>
-
-        {selectedImage && (
-          <div
-            className="p-1 fixed inset-0 bg-black bg-opacity-80 duration-500 flex items-center justify-center z-50"
-            onClick={() => setSelectedImage(null)}
-          >
-            <img
-              src={selectedImage}
-              alt="Selected Artwork"
-              className="border-2 border-neutral-600 max-w-full max-h-full rounded-lg"
-            />
-          </div>
-        )}
-      </section>
+            </div>
+          )}
+        </section>
+      </div>
     </div>
   );
 };

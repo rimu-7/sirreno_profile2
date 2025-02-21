@@ -22,9 +22,7 @@ function SecondPart() {
           OUR VISION
         </h1>
         <p className="text-white flex text-justify">
-          To inspire the World through imaginative storytelling, creating an
-          ecosystem and changing the perception of Liberian brands and creatives
-          through excellent delivery.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,Lorem ipsum dolor sit amet, consectetur adipiscing elit,
         </p>
         {/* <div className="flex justify-center gap-x-6 mt-4">
           <BsMusicNote className="text-5xl lg:text-6xl p-3 rounded-full bg-gray-800 text-white transition-all duration-500 hover:text-orange-600 hover:scale-110 cursor-pointer" />
@@ -56,7 +54,7 @@ function SecondPart() {
         <div>
           <img
             className="object-cover object-center  max-w-full rounded-lg hover:scale-105 hover:duration-500"
-            src={"https://res.cloudinary.com/ddssf6cm6/image/upload/v1739238606/1111_uumid5.jpg"}
+            src={"https://picsum.photos/seed/picsum/200/300"}
           />
         </div>
       </div>

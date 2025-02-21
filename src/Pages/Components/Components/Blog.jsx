@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -41,12 +40,11 @@ const Blog = () => {
 
   return (
     <div className="">
-     
       <div className="bg-[#212121] flex text-white flex-col h-full">
         <div className="flex-grow p-4">
           <div className="flex flex-col w-96 gap-4 mx-auto">
             {blogs.length === 0 ? (
-              <p className="text-white text-center">No blogs available.</p>
+              <p className="text-gray-500 text-center">No blogs available.</p>
             ) : (
               blogs.map((blog) => (
                 <Link
@@ -73,7 +71,6 @@ const Blog = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };

@@ -41,7 +41,7 @@ function EmailSend() {
         <div className="flex flex-col space-y-4">
           <label
             htmlFor="email"
-            className="text-lg font-medium uppercase text-white"
+            className="px-3 text-lg font-medium uppercase text-white"
           >
             Send email directly
           </label>

@@ -1,15 +1,16 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 
+
 import Home from "../Pages/Home/Home/Home";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
-import Music from "../Pages/Components/Music";
-import Portfolio from "../Pages/Components/Portfolio";
-import About from "../Pages/Components/About";
-import Booking from "../Pages/Components/Booking";
-import Events from "../Pages/Components/Events";
 import Blog from "../Pages/Components/Blog";
-import BlogDetail from "../Pages/Components/BlogDetails";
+import Contact from "../Pages/Components/Contact";
+import Events from "../Pages/Components/Events.jsx";
+
+import BlogDetail from "../Pages/Components/BlogDetails.jsx";
+import Music from "../Pages/Components/Music.jsx";
+import Portfolio from "../Pages/Components/Portfolio.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -21,6 +22,26 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Home />, // Home Page
       },
+
+      {
+        path: "/blog",
+        element: <Blog />,
+      },
+      
+      {
+        path: "/booking",
+        element: <Contact />,
+      },
+
+      {
+        path: "/events",
+        element: <Events />,
+      },
+
+      {
+        path: "/blogdetails/:id",
+        element: <BlogDetail />,
+      },
       {
         path: "/music",
         element: <Music />,
@@ -29,26 +50,6 @@ export const router = createBrowserRouter([
         path: "/portfolio",
         element: <Portfolio />,
       },
-      {
-        path: "/about",
-        element: <About />,
-      },
-      {
-        path: "/booking",
-        element: <Booking />,
-      },
-      {
-        path: "/events",
-        element: <Events />,
-      },
-      {
-        path: "/blog",
-        element: <Blog />,
-      },
-      {
-        path: "/blogdetails/:id",
-        element: <BlogDetail/>,
-      }
     ],
   },
 ]);
