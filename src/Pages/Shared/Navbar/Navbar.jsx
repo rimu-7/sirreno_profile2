@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import Logo from "../Logo";
+import Logo from "../Nav/Logo";
 import DropdownMenu from "./DropdownMenu";
 import MobileNav from "./MobileNav";
 import NavButton from "./NavButton";
@@ -33,7 +33,7 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between px-6 h-10 sm:px-1">
         {/* Left - Logo */}
-        <div className="flex-shrink-0">{/* <Logo /> */}</div>
+        <div className="flex-shrink-0"><Logo /></div>
 
         {/* Center - Navbar Links (Hidden on small screens) */}
         <div className="hidden sm:flex flex-1 justify-center">
