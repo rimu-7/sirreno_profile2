@@ -107,7 +107,7 @@ function Home() {
           style={{ fontFamily: "Paytone One, serif", fontStyle: "bold" }}
           className="absolute top-60 sm:top-32  right-10 sm:right-20 text-8xl sm:text-8xl md:text-6xl lg:text-9xl text-white"
         >
-          JSlught
+          
         </div>
       </div>
 

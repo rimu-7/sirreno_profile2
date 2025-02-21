@@ -72,7 +72,7 @@ const Carousel = () => {
   return (
     <div {...handlers} className="relative overflow-hidden">
       <div
-        className="flex items-start justify-center h-36 w-36 relative"
+        className="flex items-start justify-center h-16 w-16 relative"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
