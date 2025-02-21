@@ -6,7 +6,7 @@ import Features from './Music/Features'
 function Music() {
   return (
     <div>
-      <div className="">
+      <div className="w-full">
         <Songs/>
         <Albums/>
         <Features/>

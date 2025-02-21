@@ -60,13 +60,13 @@ const Albums = () => {
 
   return (
     <div className="">
-      <div className="p-5">
+      <div className="">
         <h2 className="text-6xl font-bold text-center mb-6">Albums</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-5 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 p-2 gap-2 sm:gap-6">
           {musicCards.slice(0, showAll ? musicCards.length : 3).map((card) => (
             <div
               key={card.id}
-              className="bg-black rounded-lg p-4 flex flex-col w-96  gap-4 mx-auto"
+              className="bg-black rounded-lg p-4 flex flex-col gap-2 "
             >
               <img
                 src={card.image}
