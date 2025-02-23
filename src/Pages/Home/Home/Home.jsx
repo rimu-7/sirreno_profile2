@@ -12,7 +12,7 @@ import Navbar from "../../Shared/Navbar/Navbar";
 const iconVariants = (duration) => ({
   initial: { y: 0 },
   animate: {
-    y: [10, -10],
+    y: [20, -20],
     transition: {
       duration: duration,
       ease: "linear",
@@ -25,32 +25,29 @@ const iconVariants = (duration) => ({
 const quote = [
   {
     id: 1,
-    description: `“Believe in yourself and anything is possible”`,
+    description: `“I’m all you need baby”`,
   },
   {
     id: 2,
-    description: `“Dream big, work hard, stay focused”`,
+    description: `“Everyday is holiday”`,
   },
   {
     id: 3,
-    description: `“Success is the sum of small efforts repeated daily”`,
+    description: `“No money no love”`,
   },
   {
     id: 4,
-    description: `“Your only limit is your mind”`,
+    description: `“Never been the same since I met you”`,
   },
   {
     id: 5,
-    description: `“Keep going, everything you need will come”`,
+    description: `“Fine like Benita, sweet like Belinda”`,
   },
   {
     id: 6,
-    description: `“You are capable of amazing things”`,
+    description: `“She do me something I can’t deny”`,
   },
-  {
-    id: 7,
-    description: `“Hustle until your haters ask if you’re hiring”`,
-  },
+
 ];
 
 function Home() {
@@ -82,6 +79,7 @@ function Home() {
 
   return (
     <div className="relative w-full min-h-screen">
+
       {/* Navbar */}
       <div className="absolute top-0 left-0 w-full z-10">
         {/* Show only on small screens */}
@@ -102,12 +100,22 @@ function Home() {
           backgroundImage: "url(https://res.cloudinary.com/ddssf6cm6/image/upload/v1739851698/artist_website_1_fe02ec.jpg)",
         }}
       >
+        {/* Show Carousel2 only on mobile, centered and positioned to the right */}
+        <motion.div
+          variants={iconVariants(2.6)}
+          initial="initial"
+          animate="animate"
+          className="sm:hidden flex absolute bottom-42 rounded-2xl w-full" style={{ right: '-40px' }}      >
+          <div className="flex justify-center">
+            <Carousel2 />
+          </div>
+        </motion.div>
         {/* Artist Name */}
         <div
           style={{ fontFamily: "Paytone One, serif", fontStyle: "bold" }}
           className="absolute top-60 sm:top-32  right-10 sm:right-20 text-8xl sm:text-8xl md:text-6xl lg:text-9xl text-white"
         >
-          
+
         </div>
       </div>
 
@@ -115,25 +123,14 @@ function Home() {
         <div className="flex-1 flex justify-start">
           <Carousel />
         </div>
-        <div className="flex-1 flex justify-end">
+        <motion.div className="flex-1 flex justify-end"
+          variants={iconVariants(2.6)}
+          initial="initial"
+          animate="animate"
+        >
           <Carousel2 />
-        </div>
+        </motion.div>
       </div>
-
-      {/* Show Carousel2 only on mobile, centered and positioned to the right */}
-      <motion.div
-        variants={iconVariants(2.6)}
-        initial="initial"
-        animate="animate"
-        className="sm:hidden flex absolute bottom-42 w-full">
-        <div className="flex justify-center">
-          <Carousel2 />
-        </div>
-      </motion.div>
-
-
-
-
 
 
 

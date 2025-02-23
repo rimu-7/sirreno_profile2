@@ -65,13 +65,13 @@ const Carousel = () => {
   return (
     <div {...handlers} className="relative overflow-hidden">
       <div
-        className="flex items-start justify-center h-24 w-24 relative"
+        className="flex items-start justify-center h-36 w-36  relative"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         {images.length > 0 && (
           <Link to={images[activeIndex].link} className="cursor-pointer">
-            <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute rounded-xl inset-0 overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={images[activeIndex].imageUrl}
