@@ -1,80 +1,54 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Songs = () => {
-  // Dummy data for the music cards
+  const [musicCards, setMusicCards] = useState([]);
   const [showAll, setShowAll] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const fetchMusic = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/api/music"); // Change this to your actual API endpoint
+        if (!response.ok) {
+          throw new Error("Failed to fetch songs");
+        }
+        const data = await response.json();
+        setMusicCards(data); // Assuming API returns an array of music objects
+      } catch (error) {
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMusic();
+  }, []);
 
   const handleSeeMore = () => {
     setShowAll(true);
   };
-  const musicCards = [
-    {
-      id: 1,
-      image: "https://picsum.photos/200/300", // Dummy image URL
-      title: "Song Title 1",
-      artist: "Artist Name",
-      purchaseLink: "https://music.apple.com", // Link to Apple Music
-      streamLink: "https://open.spotify.com/artist/12345", // Link to streaming platform
-    },
-    {
-      id: 2,
-      image: "https://picsum.photos/200/300", // Dummy image URL
-      title: "Song Title 2",
-      artist: "Artist Name",
-      purchaseLink: "https://music.apple.com", // Link to Apple Music
-      streamLink: "https://open.spotify.com/artist/12345", // Link to streaming platform
-    },
-    {
-      id: 3,
-      image: "https://picsum.photos/200/300", // Dummy image URL
-      title: "Song Title 3",
-      artist: "Artist Name",
-      purchaseLink: "https://music.apple.com", // Link to Apple Music
-      streamLink: "https://open.spotify.com/artist/12345", // Link to streaming platform
-    },
-    {
-      id: 4,
-      image: "https://picsum.photos/200/300", // Dummy image URL
-      title: "Song Title 1",
-      artist: "Artist Name",
-      purchaseLink: "https://music.apple.com", // Link to Apple Music
-      streamLink: "https://open.spotify.com/artist/12345", // Link to streaming platform
-    },
-    {
-      id: 5,
-      image: "https://picsum.photos/200/300", // Dummy image URL
-      title: "Song Title 2",
-      artist: "Artist Name",
-      purchaseLink: "https://music.apple.com", // Link to Apple Music
-      streamLink: "https://open.spotify.com/artist/12345", // Link to streaming platform
-    },
-    {
-      id: 6,
-      image: "https://picsum.photos/200/300", // Dummy image URL
-      title: "Song Title 3",
-      artist: "Artist Name",
-      purchaseLink: "https://music.apple.com", // Link to Apple Music
-      streamLink: "https://open.spotify.com/artist/12345", // Link to streaming platform
-    },
-  ];
 
   return (
-    <div className="">
-      <div className="p-2">
-        <h2 className="text-6xl font-bold text-center mb-6">Singles</h2>
-        <div className="grid grid-cols-1  sm:grid-cols-2 lg:grid-cols-3  gap-4 sm:gap-6">
+    <div className="p-2">
+      <h2 className="text-6xl font-bold text-center mb-6">Singles</h2>
+
+      {loading && <p className="text-center text-gray-500">Loading songs...</p>}
+      {error && <p className="text-center text-red-500">{error}</p>}
+
+      {!loading && !error && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {musicCards.slice(0, showAll ? musicCards.length : 3).map((card) => (
             <div
-              key={card.id}
-              className="bg-black rounded-lg p-4 flex flex-col gap-4 "
+              key={card._id} // Assuming MongoDB generates `_id`
+              className="bg-black rounded-lg p-4 flex flex-col gap-4"
             >
               <img
-                src={card.image}
+                src={card.image} // Assuming API provides an image URL
                 alt={card.title}
-                className=" w-full h-48 object-cover rounded-lg"
+                className="w-full h-48 object-cover rounded-lg"
               />
               <h3 className="text-lg font-semibold mt-3">{card.title}</h3>
-              <p className="text-sm text-gray-400">{card.artist}</p>
               <div className="mt-4 space-y-2">
                 <a
                   href={card.purchaseLink}
@@ -96,17 +70,18 @@ const Songs = () => {
             </div>
           ))}
         </div>
-        {!showAll && (
-          <div className="mt-4 text-center">
-            <button
-              onClick={handleSeeMore}
-              className="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition-colors"
-            >
-              See More
-            </button>
-          </div>
-        )}
-      </div>
+      )}
+
+      {!showAll && musicCards.length > 3 && (
+        <div className="mt-4 text-center">
+          <button
+            onClick={handleSeeMore}
+            className="bg-gray-800 text-white py-2 px-4 rounded-md hover:bg-gray-700 transition-colors"
+          >
+            See More
+          </button>
+        </div>
+      )}
     </div>
   );
 };
