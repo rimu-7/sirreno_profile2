@@ -120,16 +120,17 @@ function Home() {
       </div>
 
       <div className="hidden sm:flex fixed inset-0 items-center justify-between px-8 sm:px-16 lg:px-24 w-full h-full">
-        <div className="flex-1 flex justify-start">
-          <Carousel />
-        </div>
-        <motion.div className="flex-1 flex justify-end"
+        <motion.div className="flex-1 flex justify-start "
           variants={iconVariants(2.6)}
           initial="initial"
           animate="animate"
         >
           <Carousel2 />
         </motion.div>
+        <div className="flex-1 flex justify-end">
+          <Carousel />
+        </div>
+
       </div>
 
 

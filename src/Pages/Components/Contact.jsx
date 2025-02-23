@@ -30,7 +30,7 @@ const iconVariants = (duration) => ({
 function Contact() {
   return (
     <div className="">
-      
+
       <div className="min-h-screen bg-[#212121] text-white flex items-center justify-center p-6">
         <div className="p-8 rounded-lg shadow-2xl border-2 border-neutral-700 w-full max-w-4xl lg:max-w-5xl xl:max-w-6xl">
           <h1
@@ -48,9 +48,9 @@ function Contact() {
                 href="tel:+231886120438"
                 className="text-lg hover:text-blue-600"
               >
-                +231 886 120 438
+                +231880372858
               </a>
-              <a
+              {/* <a
                 href="tel:+231770277646"
                 className="text-lg hover:text-blue-600"
               >
@@ -61,14 +61,15 @@ function Contact() {
                 className="text-lg hover:text-blue-600"
               >
                 +231 555 267 036
-              </a>
+              </a> */}
             </div>
 
             {/* Email */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 justify-center">
+            <a href="mailto:jslughtmusic@gmail.com" className="flex flex-col sm:flex-row items-center gap-4 justify-center">
               <MdOutlineEmail className="text-xl sm:text-2xl text-blue-600" />
-              <p className="text-lg">nativebreedmedia@gmail.com</p>
-            </div>
+              <p className="text-lg hover:text-blue-600">jslughtmusic@gmail.com</p>
+
+            </a>
 
             {/* Social Media Icons */}
             <div className="flex flex-wrap justify-center gap-4 sm:gap-6 xl:gap-8 mt-6">
