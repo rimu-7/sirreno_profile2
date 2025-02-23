@@ -34,7 +34,7 @@ const Navbar = () => {
     >
       <div className="flex items-center justify-between px-6 h-10 sm:px-1">
         {/* Left - Logo */}
-        <div className="flex-shrink-0">
+        <div className="">
           <Logo />
         </div>
 
