@@ -138,10 +138,18 @@ function Home() {
       <animated.div
         style={quoteAnimation}
         className="absolute hidden sm:flex bottom-10 sm:bottom-20 px-4 sm:px-16 italic sm:text-lg md:text-xl"
+
       >
-        <p>{quote[currentIndex].description}</p>
+        <p
+          style={{ fontStyle: 'italic' }}
+        >
+          {quote[currentIndex].description}
+        </p>
+
       </animated.div>
+
     </div >
+
 
   );
 }
