@@ -27,7 +27,7 @@ const menuItems = [
   { name: "Music", path: "/music" },
   { name: "Portfolio", path: "/portfolio" },
   { name: "Blog", path: "/blog" },
-  { name: "Booking", path: "/booking" },
+  { name: "Bookings", path: "/booking" },
   { name: "Events", path: "/events" },
 ];
 const MobileNav = ({ isOpen, toggleMenu }) => {
