@@ -9,7 +9,7 @@ const Songs = () => {
   useEffect(() => {
     const fetchMusic = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/music"); // Change this to your actual API endpoint
+        const response = await fetch("https://profile-2-backend-server.vercel.app/api/music"); // Change this to your actual API endpoint
         if (!response.ok) {
           throw new Error("Failed to fetch songs");
         }
